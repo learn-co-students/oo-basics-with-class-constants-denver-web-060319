@@ -4,6 +4,17 @@ class Shoe
 
   def initialize(brand)
     @brand = brand
+    BRANDS << @brand
+  end
+
+  BRANDS = []
+
+  def uniq_brands
+    BRANDS << BRANDS.uniq
+  end
+
+  def brand=(brand)
+    @brand = brand
   end
 
   def cobble
